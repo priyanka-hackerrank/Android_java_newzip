@@ -1,0 +1,17 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - app/src/test/java/com/hackerrank/starter/MainActivityTest.java
+  scoring:
+    command: gradle :app:testDebugUnitTest --rerun-tasks
+    files:
+      - app/build/test-results/testDebugUnitTest/TEST-com.hackerrank.starter.MainActivityTest.xml
+  ide_config:
+    default_open_files:
+      - app/src/main/res/layout/activity_main.xml
+      - app/src/main/java/com/hackerrank/starter/MainActivity.java
+    project_menu:
+      run: gradle build
+      install: gradle build
+      test: gradle :app:testDebugUnitTest --rerun-tasks
